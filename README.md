@@ -1,4 +1,4 @@
-[![npm version](https://img.shields.io/npm/v/isaacscript.svg)](https://www.npmjs.com/package/isaacscript)
+[![npm version](https://img.shields.io/npm/v/xml-to-json.svg)](https://www.npmjs.com/package/xml-to-json)
 
 # xml-to-json
 
