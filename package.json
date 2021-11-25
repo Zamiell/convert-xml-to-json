@@ -1,6 +1,6 @@
 {
   "name": "xml-to-json",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A command line tool for converting XML files to JSON files",
   "homepage": "https://github.com/Zamiell/xml-to-json",
   "bugs": {
@@ -26,7 +26,7 @@
     "@types/source-map-support": "^0.5.4",
     "@types/xml2js": "^0.4.9",
     "@types/yargs": "^17.0.7",
-    "isaacscript-lint": "^1.0.64",
+    "isaacscript-lint": "^1.0.67",
     "typescript": "^4.4.4"
   }
 }
