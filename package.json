@@ -1,19 +1,19 @@
 {
-  "name": "xml-to-json",
-  "version": "2.0.0",
+  "name": "convert-xml-to-json",
+  "version": "1.0.0",
   "description": "A command line tool for converting XML files to JSON files",
-  "homepage": "https://github.com/Zamiell/xml-to-json",
+  "homepage": "https://github.com/Zamiell/convert-xml-to-json",
   "bugs": {
-    "url": "https://github.com/Zamiell/xml-to-json/issues"
+    "url": "https://github.com/Zamiell/convert-xml-to-json/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zamiell/xml-to-json.git"
+    "url": "git+https://github.com/Zamiell/convert-xml-to-json.git"
   },
   "license": "GPL-3.0",
   "author": "Zamiell",
   "bin": {
-    "xml-to-json": "./dist/main.js"
+    "convert-xml-to-json": "./dist/main.js"
   },
   "dependencies": {
     "chalk": "^4.1.2",

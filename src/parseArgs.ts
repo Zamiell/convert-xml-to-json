@@ -1,13 +1,14 @@
 import yargs from "yargs";
+import { APP_NAME } from "./constants";
 
 export function parseArgs() {
   const yargsObject = yargs(process.argv.slice(2))
-    .usage("usage: xml-to-json <path-to-xml-file> <path-to-json-file>")
+    .usage(`usage: ${APP_NAME} <path-to-xml-file> <path-to-json-file>`)
     .command(
       "$0 <pathToXMLFile> <pathToJSONFile>",
       "Convert an XML file to a JSON file",
     )
-    .scriptName("xml-to-json")
+    .scriptName(`${APP_NAME}`)
     .alias("h", "help") // By default, only "--help" is enabled
     .alias("v", "version"); // By default, only "--version" is enabled
 
