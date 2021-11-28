@@ -16,7 +16,7 @@
     "convert-xml-to-json": "./dist/main.js"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chalk": "4.1.2",
     "source-map-support": "^0.5.21",
     "xml2js": "^0.4.23",
     "yargs": "^17.2.1"
@@ -26,7 +26,7 @@
     "@types/source-map-support": "^0.5.4",
     "@types/xml2js": "^0.4.9",
     "@types/yargs": "^17.0.7",
-    "isaacscript-lint": "^1.0.67",
-    "typescript": "^4.4.4"
+    "isaacscript-lint": "^1.0.68",
+    "typescript": "^4.5.2"
   }
 }
