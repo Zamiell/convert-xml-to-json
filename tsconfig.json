@@ -1,23 +1,20 @@
-// The configuration file for TypeScript
+// The configuration file for TypeScript.
 {
-  // We extend the standard IsaacScript config
+  // We specify the schema to get auto-complete and validation.
+  "$schema": "https://raw.githubusercontent.com/IsaacScript/isaacscript/main/packages/isaacscript-tsconfig/schemas/tsconfig-schema.json",
+
+  // We extend the standard IsaacScript config:
   // https://github.com/IsaacScript/isaacscript-tsconfig/blob/main/tsconfig.node.json
   "extends": "isaacscript-tsconfig/tsconfig.node.json",
 
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
   "compilerOptions": {
-    // "outDir" specifies the output directory
-    // By default, it will put the compiled ".js" next to the respective ".ts" file,
-    // which will clutter the "src" directory
     "outDir": "./dist",
 
-    // We need to import the "package.json" file to see what version we are running
-    // By default, this is false
+    // We need to import the "package.json" file to see what version we are running.
     "resolveJsonModule": true,
   },
 
-  // A list of the TypeScript files to compile
-  "include": [
-    "./src/**/*.ts",
-  ],
+  // A list of the TypeScript files to compile.
+  "include": ["./src/**/*.ts"],
 }
