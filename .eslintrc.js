@@ -8,7 +8,7 @@ module.exports = {
   ],
 
   // Don't bother linting the compiled output.
-  ignorePatterns: ["./dist/**"],
+  ignorePatterns: ["dist/**"],
 
   parserOptions: {
     // ESLint needs to know about the project's TypeScript settings in order for TypeScript-specific
