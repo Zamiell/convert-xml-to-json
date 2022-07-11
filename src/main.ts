@@ -12,10 +12,10 @@ main();
 function main() {
   sourceMapSupport.install();
 
-  // Get command line arguments
-  const argv = parseArgs() as Record<string, string>;
+  // Get command line arguments.
+  const args = parseArgs();
 
-  convertXMLToJson(argv.pathToXMLFile, argv.pathToJSONFile);
+  convertXMLToJson(args.xmlPath, args.jsonPath);
 }
 
 function convertXMLToJson(xmlPath: string, jsonPath: string) {
