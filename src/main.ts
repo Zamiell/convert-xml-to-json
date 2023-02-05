@@ -13,11 +13,18 @@ main();
 function main() {
   sourceMapSupport.install();
 
-  // Get command line arguments.
   const args = parseArgs();
+  const verbose = args.verbose === true;
 
   args.xmlPath = path.resolve(args.xmlPath);
-  args.jsonPath = path.resolve(args.xmlPath);
+  if (verbose) {
+    console.log(`Using XML path: ${args.xmlPath}`);
+  }
+
+  args.jsonPath = path.resolve(args.jsonPath);
+  if (verbose) {
+    console.log(`Using JSON path: ${args.jsonPath}`);
+  }
 
   convertXMLToJson(args.xmlPath, args.jsonPath);
 }

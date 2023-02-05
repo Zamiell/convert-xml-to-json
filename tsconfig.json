@@ -7,11 +7,6 @@
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
   "compilerOptions": {
     "outDir": "./dist",
-
-    // The "xml2js" dependency does not work properly with ESM, so this project must stay on CJS.
-    // Thus, we have to manually revert the ESM options from the base config.
-    "module": "CommonJS",
-    "moduleResolution": "node",
   },
 
   // A list of the TypeScript files to compile.
