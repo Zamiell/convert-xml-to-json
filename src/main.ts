@@ -16,17 +16,17 @@ function main() {
   const args = parseArgs();
   const verbose = args.verbose === true;
 
-  args.xmlPath = path.resolve(args.xmlPath);
+  const xmlPath = path.resolve(args.xmlPath);
   if (verbose) {
     console.log(`Using XML path: ${args.xmlPath}`);
   }
 
-  args.jsonPath = path.resolve(args.jsonPath);
+  const jsonPath = path.resolve(args.jsonPath);
   if (verbose) {
     console.log(`Using JSON path: ${args.jsonPath}`);
   }
 
-  convertXMLToJson(args.xmlPath, args.jsonPath);
+  convertXMLToJson(xmlPath, jsonPath);
 }
 
 function convertXMLToJson(xmlPath: string, jsonPath: string) {
