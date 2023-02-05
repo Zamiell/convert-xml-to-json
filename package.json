@@ -12,7 +12,7 @@
   },
   "license": "GPL-3.0",
   "author": "Zamiell",
-  "type": "module",
+  "type": "commonjs",
   "bin": {
     "convert-xml-to-json": "./dist/main.js"
   },
