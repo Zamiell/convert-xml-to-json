@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
+import * as path from "node:path";
 import sourceMapSupport from "source-map-support";
 import xml2js from "xml2js";
-import * as file from "./file";
+import { fileExists, isFile, readFile, writeFile } from "./file";
 import { parseArgs } from "./parseArgs";
-import { error } from "./util";
+import { error } from "./utils";
 
 main();
 
@@ -15,19 +16,22 @@ function main() {
   // Get command line arguments.
   const args = parseArgs();
 
+  args.xmlPath = path.resolve(args.xmlPath);
+  args.jsonPath = path.resolve(args.xmlPath);
+
   convertXMLToJson(args.xmlPath, args.jsonPath);
 }
 
 function convertXMLToJson(xmlPath: string, jsonPath: string) {
-  if (!file.exists(xmlPath)) {
+  if (!fileExists(xmlPath)) {
     error(`The file "${xmlPath}" does not exist.`);
   }
 
-  if (!file.isFile(xmlPath)) {
+  if (!isFile(xmlPath)) {
     error(`"${xmlPath}" is not a file.`);
   }
 
-  const xml = file.read(xmlPath);
+  const xml = readFile(xmlPath);
   xml2js
     .parseStringPromise(xml)
     .then((result: unknown) => {
@@ -42,7 +46,7 @@ function convertXMLToJson(xmlPath: string, jsonPath: string) {
 
 function conversionComplete(result: unknown, jsonPath: string) {
   const json = JSON.stringify(result);
-  file.write(jsonPath, json);
+  writeFile(jsonPath, json);
 
   console.log(`Wrote to JSON file: ${chalk.green(jsonPath)}`);
 }

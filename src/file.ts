@@ -1,19 +1,8 @@
 import chalk from "chalk";
-import fs from "fs";
-import { error } from "./util";
+import * as fs from "node:fs";
+import { error } from "./utils";
 
-export function read(filePath: string): string {
-  let fileContents: string;
-  try {
-    fileContents = fs.readFileSync(filePath, "utf8");
-  } catch (err) {
-    error(`Failed to read the "${chalk.green(filePath)}" file:`, err);
-  }
-
-  return fileContents;
-}
-
-export function exists(filePath: string): boolean {
+export function fileExists(filePath: string): boolean {
   let pathExists: boolean;
   try {
     pathExists = fs.existsSync(filePath);
@@ -22,6 +11,11 @@ export function exists(filePath: string): boolean {
   }
 
   return pathExists;
+}
+
+export function isFile(filePath: string): boolean {
+  const fileStats = getFileStats(filePath);
+  return fileStats.isFile();
 }
 
 function getFileStats(filePath: string): fs.Stats {
@@ -35,12 +29,18 @@ function getFileStats(filePath: string): fs.Stats {
   return fileStats;
 }
 
-export function isFile(filePath: string): boolean {
-  const fileStats = getFileStats(filePath);
-  return fileStats.isFile();
+export function readFile(filePath: string): string {
+  let fileContents: string;
+  try {
+    fileContents = fs.readFileSync(filePath, "utf8");
+  } catch (err) {
+    error(`Failed to read the "${chalk.green(filePath)}" file:`, err);
+  }
+
+  return fileContents;
 }
 
-export function write(filePath: string, data: string): void {
+export function writeFile(filePath: string, data: string): void {
   try {
     fs.writeFileSync(filePath, data);
   } catch (err) {

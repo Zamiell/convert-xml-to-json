@@ -19,15 +19,15 @@
     "chalk": "4.1.2",
     "source-map-support": "^0.5.21",
     "xml2js": "^0.4.23",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.2"
   },
   "devDependencies": {
-    "@types/node": "^18.0.3",
-    "@types/source-map-support": "^0.5.4",
+    "@types/node": "^18.11.19",
+    "@types/source-map-support": "^0.5.6",
     "@types/xml2js": "^0.4.11",
-    "@types/yargs": "^17.0.10",
-    "isaacscript-lint": "^3.0.0",
-    "isaacscript-tsconfig": "^2.0.0",
-    "typescript": "^4.7.4"
+    "@types/yargs": "^17.0.22",
+    "isaacscript-lint": "^4.8.4",
+    "isaacscript-tsconfig": "^3.0.4",
+    "typescript": "^4.9.5"
   }
 }
