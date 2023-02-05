@@ -3,12 +3,13 @@
 module.exports = {
   extends: [
     // The linter base is the shared IsaacScript config:
-    // https://github.com/IsaacScript/eslint-config-isaacscript/blob/main/base.js
+    // https://github.com/IsaacScript/isaacscript/blob/main/packages/eslint-config-isaacscript/base.js
     "eslint-config-isaacscript/base",
   ],
 
-  // Don't bother linting the compiled output.
-  ignorePatterns: ["dist/**"],
+  // The ".prettierrc.cjs" file is ignored by default, so we have to un-ignore it. Additionally, we
+  // don't bother linting the compiled output.
+  ignorePatterns: ["!.prettierrc.cjs", "**/dist/**"],
 
   parserOptions: {
     // ESLint needs to know about the project's TypeScript settings in order for TypeScript-specific

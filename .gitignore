@@ -2,11 +2,11 @@
 # convert-xml-to-json
 # -------------------
 
-# Windows artifacts
+# OS-specific artifacts
+.DS_Store
 thumbs.db
 
-# MacOS artifacts
-.DS_Store
+# cspell:disable
 
 # ------------------------------
 # GitHub Node.gitignore template

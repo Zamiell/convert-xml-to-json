@@ -24,6 +24,10 @@ npx ts-prune --error
 
 # Spell check every file using CSpell.
 # "--no-progress" and "--no-summary" make it only output errors.
-npx cspell --no-progress --no-summary
+npx cspell --no-progress --no-summary .
+
+# Check for base file updates.
+# @template-ignore-next-line
+#npx isaacscript check-ts # TODO
 
 echo "Successfully linted in $SECONDS seconds."
