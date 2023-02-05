@@ -4,9 +4,9 @@ import chalk from "chalk";
 import * as path from "node:path";
 import sourceMapSupport from "source-map-support";
 import xml2js from "xml2js";
-import { fileExists, isFile, readFile, writeFile } from "./file";
-import { parseArgs } from "./parseArgs";
-import { error } from "./utils";
+import { fileExists, isFile, readFile, writeFile } from "./file.js";
+import { parseArgs } from "./parseArgs.js";
+import { error } from "./utils.js";
 
 main();
 

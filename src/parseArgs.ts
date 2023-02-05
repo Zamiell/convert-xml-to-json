@@ -1,5 +1,5 @@
 import yargs from "yargs";
-import { APP_NAME } from "./constants";
+import { APP_NAME } from "./constants.js";
 
 interface Args {
   _: string[];

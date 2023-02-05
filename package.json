@@ -12,6 +12,7 @@
   },
   "license": "GPL-3.0",
   "author": "Zamiell",
+  "type": "module",
   "bin": {
     "convert-xml-to-json": "./dist/main.js"
   },
@@ -27,7 +28,7 @@
     "@types/xml2js": "^0.4.11",
     "@types/yargs": "^17.0.22",
     "isaacscript-lint": "^4.8.4",
-    "isaacscript-tsconfig": "^3.0.4",
+    "isaacscript-tsconfig": "^4.0.0",
     "typescript": "^4.9.5"
   }
 }

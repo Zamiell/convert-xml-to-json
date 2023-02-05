@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import * as fs from "node:fs";
-import { error } from "./utils";
+import { error } from "./utils.js";
 
 export function fileExists(filePath: string): boolean {
   let pathExists: boolean;

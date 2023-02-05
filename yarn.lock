@@ -1883,10 +1883,10 @@ isaacscript-lint@^4.8.4:
     prettier-plugin-organize-imports "^3.2.2"
     ts-prune-2 "^0.10.7"
 
-isaacscript-tsconfig@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/isaacscript-tsconfig/-/isaacscript-tsconfig-3.0.4.tgz#67cf50bb39ddc05785d0ccff6d78d7796de60689"
-  integrity sha512-BDdKDMeTZU64/7AcpJv1NxosIydc6PaIMMaBbNGwQBPiwBNzAhG3ZYQSSnf+J6+QHyfHl3c8D0GULpRn/djLEA==
+isaacscript-tsconfig@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/isaacscript-tsconfig/-/isaacscript-tsconfig-4.0.0.tgz#34e3befb2cb6b1b813be7135c8828f3228296cd9"
+  integrity sha512-28vpFez7IDwXzNozd4jfQSLDLAWCrVy3Rqcw3Xy5ClEI3XDB+Xxa+ZZfQ7sB0+SpmuChFOtI+KErlISLOP9xpQ==
   dependencies:
     "@tsconfig/strictest" "^1.0.2"
 
