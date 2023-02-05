@@ -1,6 +1,6 @@
 {
   "name": "convert-xml-to-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A command line tool for converting XML files to JSON files",
   "homepage": "https://github.com/Zamiell/convert-xml-to-json",
   "bugs": {
