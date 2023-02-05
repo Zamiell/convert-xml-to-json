@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
+import * as path from "node:path";
 import sourceMapSupport from "source-map-support";
 import xml2js from "xml2js";
 import { fileExists, isFile, readFile, writeFile } from "./file";
@@ -14,6 +15,9 @@ function main() {
 
   // Get command line arguments.
   const args = parseArgs();
+
+  args.xmlPath = path.resolve(args.xmlPath);
+  args.jsonPath = path.resolve(args.xmlPath);
 
   convertXMLToJson(args.xmlPath, args.jsonPath);
 }
