@@ -1,4 +1,4 @@
-# Ignore compiled output.
+# Compiled output
 dist
 
 # Package manager lock files
@@ -6,5 +6,7 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
+# @template-customization-start
 # Test files
 test
+# @template-customization-end

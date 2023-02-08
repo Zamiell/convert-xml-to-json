@@ -2,7 +2,7 @@
 
 set -e # Exit on any errors
 
-# Get the directory of this script
+# Get the directory of this script:
 # https://stackoverflow.com/questions/59895/getting-the-source-directory-of-a-bash-script-from-within
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
@@ -26,8 +26,12 @@ npx ts-prune --error
 # "--no-progress" and "--no-summary" make it only output errors.
 npx cspell --no-progress --no-summary .
 
+# Check for unused CSpell words.
+npx cspell-check-unused-words
+
+# @template-customization-start
 # Check for base file updates.
-# @template-ignore-next-line
-#npx isaacscript check-ts # TODO
+npx isaacscript check-ts --ignore "run.sh"
+# @template-customization-end
 
 echo "Successfully linted in $SECONDS seconds."

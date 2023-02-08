@@ -6,6 +6,7 @@
   "enableGlobDot": true,
   "useGitignore": true,
   "ignorePaths": [
+    "*.pyc",
     ".git/**",
     "dist/**",
     "node_modules/**",
@@ -19,11 +20,9 @@
     "esbenp",
     "isaacscript",
     "loglevel",
-    "npmignore",
     "pnpm",
     "sarisia",
     "technote",
-    "Zamiell",
-    "zampublish"
+    "Zamiell"
   ]
 }
