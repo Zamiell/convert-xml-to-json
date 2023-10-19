@@ -6,7 +6,7 @@ import sourceMapSupport from "source-map-support";
 import xml2js from "xml2js";
 import { fileExists, isFile, readFile, writeFile } from "./file.js";
 import { parseArgs } from "./parseArgs.js";
-import { error } from "./utils.js";
+import { fatalError } from "./utils.js";
 
 main();
 
@@ -31,11 +31,11 @@ function main() {
 
 function convertXMLToJson(xmlPath: string, jsonPath: string) {
   if (!fileExists(xmlPath)) {
-    error(`The file "${xmlPath}" does not exist.`);
+    fatalError(`The file "${xmlPath}" does not exist.`);
   }
 
   if (!isFile(xmlPath)) {
-    error(`"${xmlPath}" is not a file.`);
+    fatalError(`"${xmlPath}" is not a file.`);
   }
 
   const xml = readFile(xmlPath);
@@ -44,9 +44,9 @@ function convertXMLToJson(xmlPath: string, jsonPath: string) {
     .then((result: unknown) => {
       conversionComplete(result, jsonPath);
     })
-    .catch((err) => {
-      error(
-        `Failed to convert the "${xmlPath}" file to a JavaScript object: ${err}`,
+    .catch((error) => {
+      fatalError(
+        `Failed to convert the "${xmlPath}" file to a JavaScript object: ${error}`,
       );
     });
 }
