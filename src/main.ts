@@ -1,12 +1,16 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
+import {
+  fatalError,
+  isFile,
+  readFile,
+  writeFile,
+} from "isaacscript-common-node";
 import * as path from "node:path";
 import sourceMapSupport from "source-map-support";
 import xml2js from "xml2js";
-import { fileExists, isFile, readFile, writeFile } from "./file.js";
 import { parseArgs } from "./parseArgs.js";
-import { fatalError } from "./utils.js";
 
 main();
 
@@ -30,7 +34,7 @@ function main() {
 }
 
 function convertXMLToJson(xmlPath: string, jsonPath: string) {
-  if (!fileExists(xmlPath)) {
+  if (!isFile(xmlPath)) {
     fatalError(`The file "${xmlPath}" does not exist.`);
   }
 
