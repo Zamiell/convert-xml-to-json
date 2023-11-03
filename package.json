@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "chalk": "4.1.2",
-    "isaacscript-common-node": "^1.0.1",
+    "isaacscript-common-node": "^1.0.4",
     "source-map-support": "^0.5.21",
     "xml2js": "^0.6.2",
     "yargs": "^17.7.2"

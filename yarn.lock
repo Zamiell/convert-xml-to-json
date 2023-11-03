@@ -2386,7 +2386,7 @@ __metadata:
     "@types/yargs": "npm:^17.0.29"
     chalk: "npm:4.1.2"
     isaacscript: "npm:^3.16.0"
-    isaacscript-common-node: "npm:^1.0.1"
+    isaacscript-common-node: "npm:^1.0.4"
     isaacscript-lint: "npm:^6.2.0"
     isaacscript-tsconfig: "npm:^5.0.0"
     rimraf: "npm:^5.0.5"
@@ -2733,6 +2733,13 @@ __metadata:
   version: 4.0.1
   resolution: "detect-newline@npm:4.0.1"
   checksum: 1cc1082e88ad477f30703ae9f23bd3e33816ea2db6a35333057e087d72d466f5a777809b71f560118ecff935d2c712f5b59e1008a8b56a900909d8fd4621c603
+  languageName: node
+  linkType: hard
+
+"diff@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "diff@npm:5.1.0"
+  checksum: 77a0d9beb9ed54796154ac2511872288432124ac90a1cabb1878783c9b4d81f1847f3b746a0630b1e836181461d2c76e1e6b95559bef86ed16294d114862e364
   languageName: node
   linkType: hard
 
@@ -4545,16 +4552,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"isaacscript-common-node@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "isaacscript-common-node@npm:1.0.1"
+"isaacscript-common-node@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "isaacscript-common-node@npm:1.0.4"
   dependencies:
     "@arktype/fs": "npm:^0.0.1"
     chalk: "npm:^5.3.0"
+    diff: "npm:^5.1.0"
     esbuild: "npm:^0.19.5"
     execa: "npm:^8.0.1"
+    isaacscript-common-ts: "npm:^11.3.1"
     npm-check-updates: "npm:^16.14.6"
-  checksum: f5d546b99be17f3f653590c1028b6526929f17a707d300d9d731513c61ac16765a7d5b792677b8be79b0c1f4ef3bf9d7fa5cdd7b03404740ca77591ea0e639c8
+  checksum: a0ea75a7131c7e9c7c621bb283ab42079a44758bef6783652d8eca2167d1da1783226e72559759d11c923b4668f56804c8a0806f42416d22ba083ef30f730c54
   languageName: node
   linkType: hard
 
@@ -4562,6 +4571,13 @@ __metadata:
   version: 11.3.0
   resolution: "isaacscript-common-ts@npm:11.3.0"
   checksum: 803939f8a7d7261c1ace32d16d8f980ae353072f26c47a5c0cd3af9e26c7117362789cfed7ff2729bfb78b2d1d98a3a5c52ac6d8c1ddc2b32560372502c704c2
+  languageName: node
+  linkType: hard
+
+"isaacscript-common-ts@npm:^11.3.1":
+  version: 11.3.1
+  resolution: "isaacscript-common-ts@npm:11.3.1"
+  checksum: 20665865e62359addb7cc758d1cffdaf6ec2f2e274772d3bc55be5deaf85c8d77021a7c6ec984d7efc3ce4d963226a42ef9295d61fe8bef679ea3826dcbdd0ed
   languageName: node
   linkType: hard
 
