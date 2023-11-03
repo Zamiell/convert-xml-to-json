@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "chalk": "4.1.2",
-    "isaacscript-common-node": "^1.0.4",
+    "isaacscript-common-node": "^1.0.5",
     "source-map-support": "^0.5.21",
     "xml2js": "^0.6.2",
     "yargs": "^17.7.2"
@@ -38,7 +38,7 @@
     "@types/xml2js": "^0.4.13",
     "@types/yargs": "^17.0.29",
     "isaacscript": "^3.16.0",
-    "isaacscript-lint": "^6.2.0",
+    "isaacscript-lint": "^6.2.1",
     "isaacscript-tsconfig": "^5.0.0",
     "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
