@@ -40,7 +40,7 @@
     "@types/source-map-support": "^0.5.9",
     "@types/xml2js": "^0.4.13",
     "@types/yargs": "^17.0.29",
-    "isaacscript": "^3.17.6",
+    "isaacscript": "^3.17.7",
     "isaacscript-common-ts": "^11.3.1",
     "isaacscript-lint": "^6.2.2",
     "isaacscript-tsconfig": "^5.0.0",
