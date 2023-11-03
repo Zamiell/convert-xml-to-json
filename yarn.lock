@@ -2486,8 +2486,8 @@ __metadata:
     "@types/xml2js": "npm:^0.4.13"
     "@types/yargs": "npm:^17.0.29"
     chalk: "npm:^5.3.0"
-    isaacscript: "npm:^3.17.7"
-    isaacscript-common-node: "npm:^1.0.8"
+    isaacscript: "npm:^3.17.9"
+    isaacscript-common-node: "npm:^1.1.1"
     isaacscript-common-ts: "npm:^11.3.1"
     isaacscript-lint: "npm:^6.2.2"
     isaacscript-tsconfig: "npm:^5.0.0"
@@ -4687,6 +4687,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"isaacscript-common-node@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "isaacscript-common-node@npm:1.1.1"
+  dependencies:
+    "@arktype/fs": "npm:^0.0.1"
+    chalk: "npm:^5.3.0"
+    command-exists: "npm:^1.2.9"
+    diff: "npm:^5.1.0"
+    execa: "npm:^8.0.1"
+    isaacscript-common-ts: "npm:^11.3.1"
+    jsonc-parser: "npm:^3.2.0"
+    npm-check-updates: "npm:^16.14.6"
+  checksum: 3a310e177188161ddd99ff0fb45c1c96212d3d2887ed960be99b790f71d906405a93bef3897f2befe920046cfda5ac52ac15e7bf72ddd279c08a6af8f9c56b28
+  languageName: node
+  linkType: hard
+
 "isaacscript-common-ts@npm:^11.3.1":
   version: 11.3.1
   resolution: "isaacscript-common-ts@npm:11.3.1"
@@ -4736,9 +4752,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"isaacscript@npm:^3.17.7":
-  version: 3.17.7
-  resolution: "isaacscript@npm:3.17.7"
+"isaacscript@npm:^3.17.9":
+  version: 3.17.9
+  resolution: "isaacscript@npm:3.17.9"
   dependencies:
     "@zamiell/sync-directory": "npm:^6.0.5"
     ajv: "npm:^8.12.0"
@@ -4760,7 +4776,7 @@ __metadata:
     typescript: ">= 5.0.0"
   bin:
     isaacscript: dist/main.js
-  checksum: b490b00091607b761e6b8a3463a6f46d883008d57731adc51d05d55341b934a22ddd34348cb9d0030cc37112aabc3a6ed923b4c97406f93abd714615ac8727b2
+  checksum: 854b7264d11320af7ed10d576b8dcec769bc3ec7300524105b80f08f7f9007b00323aaeecfc8bdd1cf1f2317c9153a8b25204c631b0bbbfabf51c79dd06a3873
   languageName: node
   linkType: hard
 
