@@ -1,28 +1,23 @@
-import yargs from "yargs";
-import { APP_NAME } from "./constants.js";
+import { Command } from "@commander-js/extra-typings";
+import {
+  findPackageRoot,
+  getPackageJSONFieldsMandatory,
+} from "isaacscript-common-node";
 
-interface Args {
-  _: string[];
+const packageRoot = findPackageRoot();
+const { name, version, description } = getPackageJSONFieldsMandatory(
+  packageRoot,
+  "name",
+  "version",
+  "description",
+);
 
-  xmlPath: string;
-  jsonPath: string;
-
-  verbose?: boolean;
-}
-
-/** Parse command-line arguments. */
-export function parseArgs(): Args {
-  const yargsObject = yargs(process.argv.slice(2))
-    .usage(`usage: ${APP_NAME} <path-to-xml-file> <path-to-json-file>`)
-    .command("$0 <xmlPath> <jsonPath>", "Convert an XML file to a JSON file")
-    .scriptName(`${APP_NAME}`)
-    .alias("h", "help") // By default, only "--help" is enabled.
-    .alias("v", "version") // By default, only "--version" is enabled.
-    .option("verbose", {
-      type: "boolean",
-      description: "Enable verbose output",
-    })
-    .parseSync();
-
-  return yargsObject as unknown as Args;
-}
+export const program = new Command()
+  .name(name)
+  .description(`${description}.`)
+  .version(version, "-V, --version", "Output the version number.")
+  .helpOption("-h, --help", "Display the list of commands and options.")
+  .addHelpCommand(false)
+  .allowExcessArguments(false) // By default, Commander.js will allow extra positional arguments.
+  .option("-v, --verbose", "Enable verbose output.", false)
+  .arguments("<xmlPath> <jsonPath>");

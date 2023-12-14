@@ -4,30 +4,38 @@ import chalk from "chalk";
 import {
   fatalError,
   isFile,
+  isMain,
   readFile,
   writeFile,
 } from "isaacscript-common-node";
 import * as path from "node:path";
-import sourceMapSupport from "source-map-support";
 import xml2js from "xml2js";
-import { parseArgs } from "./parseArgs.js";
+import { program } from "./parseArgs.js";
 
-main();
+if (isMain()) {
+  main();
+}
 
 function main() {
-  sourceMapSupport.install();
+  const parsedCommand = program.parse();
+  const options = parsedCommand.opts();
+  const { verbose } = options;
 
-  const args = parseArgs();
-  const verbose = args.verbose === true;
-
-  const xmlPath = path.resolve(args.xmlPath);
-  if (verbose) {
-    console.log(`Using XML path: ${args.xmlPath}`);
+  const [xmlPathRaw, jsonPathRaw] = parsedCommand.args;
+  if (xmlPathRaw === undefined || jsonPathRaw === undefined) {
+    fatalError(
+      "Error: You must provide the path to the XML input file as the first argument and the path to the JSON output file as the second argument.",
+    );
   }
 
-  const jsonPath = path.resolve(args.jsonPath);
+  const xmlPath = path.resolve(xmlPathRaw);
   if (verbose) {
-    console.log(`Using JSON path: ${args.jsonPath}`);
+    console.log(`Using XML path: ${xmlPath}`);
+  }
+
+  const jsonPath = path.resolve(jsonPathRaw);
+  if (verbose) {
+    console.log(`Using JSON path: ${jsonPath}`);
   }
 
   convertXMLToJson(xmlPath, jsonPath);
