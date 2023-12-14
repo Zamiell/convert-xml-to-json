@@ -30,22 +30,22 @@
   },
   "dependencies": {
     "chalk": "^5.3.0",
-    "isaacscript-common-node": "^1.1.1",
+    "isaacscript-common-node": "^1.6.1",
     "source-map-support": "^0.5.21",
     "xml2js": "^0.6.2",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@types/node": "^20.8.10",
-    "@types/source-map-support": "^0.5.9",
-    "@types/xml2js": "^0.4.13",
-    "@types/yargs": "^17.0.29",
-    "isaacscript": "^3.17.9",
-    "isaacscript-common-ts": "^11.3.1",
-    "isaacscript-lint": "^6.2.2",
+    "@types/node": "^20.10.4",
+    "@types/source-map-support": "^0.5.10",
+    "@types/xml2js": "^0.4.14",
+    "@types/yargs": "^17.0.32",
+    "isaacscript": "^3.33.0",
+    "isaacscript-common-ts": "^13.1.0",
+    "isaacscript-lint": "^6.12.1",
     "isaacscript-tsconfig": "^5.0.0",
-    "tsx": "^3.14.0",
-    "typescript": "^5.2.2"
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3"
   },
-  "packageManager": "yarn@4.0.1"
+  "packageManager": "yarn@4.0.2"
 }
