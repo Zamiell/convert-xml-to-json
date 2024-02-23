@@ -1,9 +1,7 @@
 import { $, lintScript } from "isaacscript-common-node";
 
 await lintScript(async () => {
-  const promises: Array<Promise<unknown>> = [];
-
-  promises.push(
+  const promises = [
     // Use Prettier to check formatting.
     // - "--log-level=warn" makes it only output errors.
     $`prettier --log-level=warn --check .`,
@@ -31,7 +29,7 @@ await lintScript(async () => {
     $`isaacscript check-ts`,
 
     // @template-customization-end
-  );
+  ];
 
   await Promise.all(promises);
 });
