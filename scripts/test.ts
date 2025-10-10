@@ -4,7 +4,7 @@ import path from "node:path";
 await testScript(import.meta.dirname, async (packageRoot) => {
   await $`npm run build`;
 
-  const compiledFile = path.join(packageRoot, "dist", "main.js");
+  const compiledFile = path.join(packageRoot, "dist", "src", "main.js");
   const xmlFile = path.join(packageRoot, "test", "angelRooms.xml");
   const oldJSONFile = path.join(packageRoot, "test", "angelRooms.json");
   const newJSONFile = path.join(packageRoot, "test", "angelRooms.new.json");

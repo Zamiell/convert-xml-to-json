@@ -13,7 +13,7 @@
   "license": "GPL-3.0",
   "author": "Zamiell",
   "type": "module",
-  "bin": "./dist/main.js",
+  "bin": "./dist/src/main.js",
   "files": [
     "dist",
     "LICENSE",
