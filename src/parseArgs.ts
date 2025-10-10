@@ -1,16 +1,7 @@
 import { Command } from "@commander-js/extra-typings";
-import {
-  findPackageRoot,
-  getPackageJSONFieldsMandatory,
-} from "isaacscript-common-node";
+import packageJSON from "../package.json" with { type: "json" };
 
-const packageRoot = findPackageRoot();
-const { name, version, description } = getPackageJSONFieldsMandatory(
-  packageRoot,
-  "name",
-  "version",
-  "description",
-);
+const { name, description, version } = packageJSON;
 
 export const program = new Command()
   .name(name)

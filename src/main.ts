@@ -1,22 +1,14 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
-import {
-  fatalError,
-  isFile,
-  isMain,
-  readFile,
-  writeFile,
-} from "isaacscript-common-node";
-import * as path from "node:path";
+import { fatalError, isFile, readFile, writeFile } from "complete-node";
+import path from "node:path";
 import xml2js from "xml2js";
 import { program } from "./parseArgs.js";
 
-if (isMain()) {
-  main();
-}
+await main();
 
-function main() {
+async function main() {
   const parsedCommand = program.parse();
   const options = parsedCommand.opts();
   const { verbose } = options;
@@ -38,34 +30,31 @@ function main() {
     console.log(`Using JSON path: ${jsonPath}`);
   }
 
-  convertXMLToJson(xmlPath, jsonPath);
+  await convertXMLToJSON(xmlPath, jsonPath);
 }
 
-function convertXMLToJson(xmlPath: string, jsonPath: string) {
-  if (!isFile(xmlPath)) {
+async function convertXMLToJSON(xmlPath: string, jsonPath: string) {
+  const xmlExists = await isFile(xmlPath);
+  if (!xmlExists) {
     fatalError(`The file "${xmlPath}" does not exist.`);
   }
 
-  if (!isFile(xmlPath)) {
-    fatalError(`"${xmlPath}" is not a file.`);
-  }
-
-  const xml = readFile(xmlPath);
+  const xml = await readFile(xmlPath);
   xml2js
     .parseStringPromise(xml)
-    .then((result: unknown) => {
-      conversionComplete(result, jsonPath);
+    .then(async (result: unknown) => {
+      await conversionComplete(result, jsonPath);
     })
-    .catch((error) => {
+    .catch((error: unknown) => {
       fatalError(
         `Failed to convert the "${xmlPath}" file to a JavaScript object: ${error}`,
       );
     });
 }
 
-function conversionComplete(result: unknown, jsonPath: string) {
+async function conversionComplete(result: unknown, jsonPath: string) {
   const json = JSON.stringify(result);
-  writeFile(jsonPath, json);
+  await writeFile(jsonPath, json);
 
   console.log(`Wrote to JSON file: ${chalk.green(jsonPath)}`);
 }

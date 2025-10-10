@@ -1,16 +1,12 @@
 // The configuration file for TypeScript.
 {
-  "$schema": "https://raw.githubusercontent.com/IsaacScript/isaacscript/main/packages/isaacscript-cli/schemas/tsconfig-strict-schema.json",
+  "$schema": "https://raw.githubusercontent.com/complete-ts/complete/main/packages/complete-tsconfig/schemas/tsconfig-strict-schema.json",
 
-  // We extend the IsaacScript config for Node.js:
-  // https://github.com/IsaacScript/isaacscript/blob/main/packages/isaacscript-tsconfig/tsconfig.node.json
-  "extends": "isaacscript-tsconfig/tsconfig.node.json",
+  "extends": [
+    // https://github.com/complete-ts/complete/blob/main/packages/complete-tsconfig/tsconfig.base.json
+    "complete-tsconfig/tsconfig.base.json",
 
-  // https://www.typescriptlang.org/docs/handbook/compiler-options.html
-  "compilerOptions": {
-    "outDir": "dist",
-  },
-
-  // A list of the TypeScript files to compile.
-  "include": ["./src/**/*.ts"],
+    // https://github.com/complete-ts/complete/blob/main/packages/complete-tsconfig/tsconfig.node.json
+    "complete-tsconfig/tsconfig.node.json",
+  ],
 }
